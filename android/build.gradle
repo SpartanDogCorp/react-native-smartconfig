@@ -5,11 +5,11 @@ buildscript {
             mavenCentral()
             jcenter()
         }
-    }
 
-  dependencies {
+        dependencies {
             classpath 'com.android.tools.build:gradle:3.5.3'
         }
+    }
 }
 
 apply plugin: 'com.android.library'

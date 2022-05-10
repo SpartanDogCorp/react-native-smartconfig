@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "<Luca Druda> lucadruda@gmail.com",
   "license": "MIT",
   "keywords": [
     "react-native",
@@ -22,10 +21,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucadruda/react-native-smartconfig.git"
+    "url": "git+https://github.com/spartandogcorp/react-native-smartconfig.git"
   },
   "bugs": {
-    "url": "https://github.com/lucadruda/react-native-smartconfig/issues"
+    "url": "https://github.com/spartandogcorp/react-native-smartconfig/issues"
   },
-  "homepage": "https://github.com/lucadruda/react-native-smartconfig#readme"
+  "homepage": "https://github.com/spartandogcorp/react-native-smartconfig#readme"
 }
