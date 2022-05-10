@@ -24,7 +24,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 
-
 import com.espressif.iot.esptouch.EsptouchTask;
 import com.espressif.iot.esptouch.IEsptouchListener;
 import com.espressif.iot.esptouch.IEsptouchResult;

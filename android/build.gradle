@@ -1,30 +1,56 @@
 buildscript {
-  repositories {
-    jcenter()
-  }
+    if (project == rootProject) {
+        repositories {
+            google()
+            mavenCentral()
+            jcenter()
+        }
+    }
 
   dependencies {
-    classpath 'com.android.tools.build:gradle:1.2.3'
-  }
+            classpath 'com.android.tools.build:gradle:3.5.3'
+        }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-  compileSdkVersion 23
-  buildToolsVersion "23.0.1"
+    compileSdkVersion safeExtGet('CalSmartconfig_compileSdkVersion', 29)
+    defaultConfig {
+        minSdkVersion safeExtGet('CalSmartconfig_minSdkVersion', 29)
+        targetSdkVersion safeExtGet('CalSmartconfig_targetSdkVersion', 29)
+        versionCode 1
+        versionName "1.0"
 
-  defaultConfig {
-    minSdkVersion 16
-    targetSdkVersion 21
-    versionCode 1
-    versionName "1.0"
-  }
-  lintOptions {
-    abortOnError false
-  }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    lintOptions {
+        disable 'GradleCompatible'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 repositories {
-  mavenCentral()
+    mavenLocal()
+    maven {
+        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+        url("$rootDir/../node_modules/react-native/android")
+    }
+    google()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    //noinspection GradleDynamicVersion
+    implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation 'com.github.EspressifApp:lib-esptouch-android:1.0.0'
 }
