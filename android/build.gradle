@@ -15,13 +15,12 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion safeExtGet('CalSmartconfig_compileSdkVersion', 29)
+    compileSdkVersion 29
     defaultConfig {
-        minSdkVersion safeExtGet('CalSmartconfig_minSdkVersion', 29)
-        targetSdkVersion safeExtGet('CalSmartconfig_targetSdkVersion', 29)
+        minSdkVersion 29
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
     }
 
     buildTypes {
